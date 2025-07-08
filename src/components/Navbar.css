@@ -6,26 +6,27 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  padding-top: 120px; /* Prevents content from hiding behind fixed navbar */
+  font-family: 'Urbanist', sans-serif;
 }
 
+/* NAVBAR */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1.2rem 3rem;
+  padding: 1.2rem 2rem;
+  background: #2f1646;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #2f1646;
-  border-radius: 0 0 16px 16px;
   z-index: 9999;
-  font-family: 'Urbanist', sans-serif;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 16px 16px;
   flex-wrap: wrap;
 }
 
+/* LOGO & BRAND */
 .navbar-left {
   display: flex;
   align-items: center;
@@ -34,8 +35,8 @@ body {
 }
 
 .logo {
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   border-radius: 50%;
   background-color: white;
   padding: 6px;
@@ -44,42 +45,46 @@ body {
 }
 
 .brand-name {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-family: 'Cinzel', serif;
   font-weight: 800;
   color: #ffffff;
-  letter-spacing: 1px;
   background: linear-gradient(45deg, #f3ec78, #af94ec);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-left: 20px;
+  margin-left: 16px;
   white-space: nowrap;
 }
 
+/* NAV LINKS */
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 2.5rem;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  flex-grow: 1;
-  margin-left: 3rem;
-  flex-wrap: nowrap;           /* Prevent wrapping */
-  overflow-x: auto;            /* Allow horizontal scroll if needed */
-  scrollbar-width: none;       /* Hide scrollbar for Firefox */
+  gap: 2rem;
+  margin-left: auto;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
 
 .navbar-links::-webkit-scrollbar {
-  display: none;               /* Hide scrollbar for Chrome */
+  display: none;
 }
 
 .navbar-links li a {
   text-decoration: none;
   color: #e1dff7;
+  font-size: 1.05rem;
   font-weight: 500;
-  font-size: 1.15rem;
+  white-space: nowrap;
   position: relative;
   transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+  color: white;
 }
 
 .navbar-links li a::after {
@@ -91,10 +96,6 @@ body {
   height: 2px;
   background-color: #d8b4f8;
   transition: width 0.3s ease;
-}
-
-.navbar-links li a:hover {
-  color: #ffffff;
 }
 
 .navbar-links li a:hover::after {
@@ -123,15 +124,13 @@ body {
 /* -------------------- */
 /* RESPONSIVE BREAKPOINTS */
 /* -------------------- */
-
 @media (max-width: 1024px) {
   .brand-name {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .navbar-links {
-    gap: 2rem;
-    margin-left: 2rem;
+    gap: 1.5rem;
   }
 }
 
@@ -139,33 +138,13 @@ body {
   .navbar {
     flex-direction: column;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
   }
 
   .navbar-left {
-    justify-content: center;
     width: 100%;
+    justify-content: center;
     margin-bottom: 0.5rem;
-  }
-
-  .brand-name {
-    font-size: 1.8rem;
-    margin-left: 16px;
-  }
-
-  .navbar-links {
-    width: 100%;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-left: 0;
-    flex-wrap: nowrap;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo {
-    height: 80px;
-    width: 80px;
   }
 
   .brand-name {
@@ -173,13 +152,34 @@ body {
     margin-left: 12px;
   }
 
+  .navbar-links {
+    width: 100%;
+    justify-content: center;
+    gap: 1.2rem;
+    overflow-x: auto;
+  }
+
   .navbar-links li a {
-    font-size: 0.9rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 70px;
+    width: 70px;
+  }
+
+  .brand-name {
+    font-size: 1.4rem;
+    margin-left: 10px;
   }
 
   .navbar-links {
-    gap: 0.8rem;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+    gap: 1rem;
+  }
+
+  .navbar-links li a {
+    font-size: 0.95rem;
   }
 }
