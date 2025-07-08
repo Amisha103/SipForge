@@ -357,6 +357,9 @@ body {
   .bottle-img {
     height: 200px;
   }
+  .home-wrapper {
+    padding-top: 160px; /* More padding on small screens */
+  }
 
   .industries-title {
     font-size: 1.8rem;
