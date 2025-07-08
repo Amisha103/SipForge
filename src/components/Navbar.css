@@ -12,6 +12,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  flex-wrap: wrap;
 }
 
 .navbar-left {
@@ -35,7 +36,7 @@
 }
 
 .brand-name {
-  font-size: 3rem;
+  font-size: 2.4rem;
   font-family: 'Cinzel', serif;
   font-weight: 800;
   color: #ffffff;
@@ -43,7 +44,8 @@
   background: linear-gradient(45deg, #f3ec78, #af94ec);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-left: 120px; /* Push text to the right so it doesn’t overlap logo */
+  margin-left: 120px;
+  white-space: nowrap;
 }
 
 .navbar-links {
@@ -54,6 +56,7 @@
   align-items: center;
   flex-grow: 1;
   margin-left: 4rem;
+  flex-wrap: wrap;
 }
 
 .navbar-links li a {
@@ -101,4 +104,65 @@
     box-shadow: 0 0 20px rgba(216, 180, 248, 0.8);
   }
 }
- 
+
+/* -------------------- */
+/* RESPONSIVE BREAKPOINTS */
+/* -------------------- */
+
+@media (max-width: 1024px) {
+  .brand-name {
+    font-size: 2rem;
+  }
+
+  .navbar-links {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+  }
+
+  .navbar-left {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .brand-name {
+    font-size: 1.8rem;
+    margin-left: 110px;
+  }
+
+  .navbar-links {
+    width: 100%;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-left: 0;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 80px;
+    width: 80px;
+    top: -20px;
+  }
+
+  .brand-name {
+    font-size: 1.6rem;
+    margin-left: 95px;
+  }
+
+  .navbar-links li a {
+    font-size: 1rem;
+  }
+
+  .navbar-links {
+    gap: 1rem;
+  }
+}

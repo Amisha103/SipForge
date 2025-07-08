@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@500;700&family=Playfair+Display:ital,wght@1,600&display=swap');
 
+/* BASE WRAPPER */
 .home-wrapper {
   background: linear-gradient(120deg, #2f1646, #1a0e29);
   color: white;
@@ -67,7 +68,8 @@
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
-/* --- BOTTLE GALLERY SECTION --- */
+
+/* BOTTLE GALLERY */
 .bottle-gallery.creative-spin {
   position: relative;
   width: 100%;
@@ -167,14 +169,11 @@
   }
 }
 
-
-/* --- WHY CHOOSE US (IMAGINATIVE CAROUSEL STYLE) --- */
+/* WHY CHOOSE US */
 .why-choose {
   padding: 6rem 2rem;
   background: linear-gradient(135deg, #200033 0%, #3f0c56 100%);
   color: #fff;
-  position: relative;
-  overflow: hidden;
   text-align: center;
 }
 
@@ -182,24 +181,17 @@
   font-size: 2.4rem;
   margin-bottom: 3rem;
   font-family: 'Cinzel', serif;
-  color: #fff;
-  position: relative;
-  z-index: 2;
   animation: floatIn 1s ease-out forwards;
   opacity: 0;
 }
 
 .choose-carousel {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
-  position: relative;
   max-width: 1200px;
   margin: 0 auto;
-  z-index: 2;
-  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .carousel-card {
@@ -210,32 +202,20 @@
   border: 1px dashed #a64ac9;
   box-shadow: 0 0 20px rgba(166, 74, 201, 0.3);
   backdrop-filter: blur(6px);
-  position: relative;
-  transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out, background 0.6s ease-in-out;
   animation: floatCard 3s ease-in-out infinite alternate;
+  transition: all 0.6s ease-in-out;
 }
 
 .carousel-card:hover {
   transform: translateY(-15px) scale(1.05);
   box-shadow: 0 0 40px rgba(166, 74, 201, 0.6);
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.carousel-card::before {
-  content: "✨";
-  font-size: 1.2rem;
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  transition: opacity 0.3s ease;
 }
 
 .carousel-card h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  font-family: 'Poppins', sans-serif;
   color: #f9f1ff;
-  transition: color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
 }
 
 .carousel-card p {
@@ -243,27 +223,6 @@
   color: #ddd;
   line-height: 1.6;
   font-family: 'Open Sans', sans-serif;
-  transition: color 0.3s ease;
-}
-
-@keyframes floatCard {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes floatIn {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 /* INDUSTRIES SECTION */
@@ -291,18 +250,16 @@
   background-color: #311c4e;
   padding: 1.5rem;
   border-radius: 12px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-align: center;
+  transition: 0.3s ease;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   color: #d5c8f5;
   font-size: 1rem;
 }
 
 .industry:hover {
-  transform: translateY(-5px);
   background-color: #3d235f;
+  transform: translateY(-5px);
 }
 
 .industry svg {
@@ -311,7 +268,70 @@
   color: #d8b4f8;
 }
 
-.industry p {
-  margin: 0;
-  font-weight: 500;
+/* ------------------------------------------ */
+/*            RESPONSIVE BREAKPOINTS          */
+/* ------------------------------------------ */
+
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .bottle-img {
+    height: 300px;
+  }
+
+  .carousel-card {
+    width: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+  }
+
+  .bottle-gallery {
+    height: 450px;
+    padding: 2rem;
+  }
+
+  .bottle-img {
+    height: 240px;
+  }
+
+  .industries-title {
+    font-size: 1.8rem;
+  }
+
+  .carousel-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.4rem;
+  }
+
+  .hero-subtext {
+    font-size: 0.95rem;
+  }
+
+  .hero-button {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .carousel-card {
+    width: 100%;
+  }
+
+  .industries-grid {
+    grid-template-columns: 1fr;
+  }
 }
