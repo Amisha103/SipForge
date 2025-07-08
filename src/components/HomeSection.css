@@ -12,6 +12,13 @@ body {
 
 /* BASE WRAPPER */
 .home-wrapper {
+     padding-top: 140px; /* Pushes content below navbar */
+  background: linear-gradient(120deg, #2f1646, #1a0e29);
+  color: white;
+  font-family: 'Urbanist', sans-serif;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-align: center;
   background: linear-gradient(120deg, #2f1646, #1a0e29);
   color: white;
   font-family: 'Urbanist', sans-serif;
