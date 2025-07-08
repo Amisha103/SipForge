@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@500;700&family=Playfair+Display:ital,wght@1,600&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -14,7 +15,7 @@ body {
   background: linear-gradient(120deg, #2f1646, #1a0e29);
   color: white;
   font-family: 'Urbanist', sans-serif;
-  padding: 4rem 2rem;
+  padding: 8rem 2rem 4rem;  /* Increased top padding to avoid overlap with navbar */
   text-align: center;
 }
 
@@ -74,8 +75,14 @@ body {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* BOTTLE GALLERY */
@@ -104,18 +111,17 @@ body {
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
   animation: glowPulse 8s infinite alternate;
 }
+
 .bottle-img {
-     top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
   height: 260px;
   width: auto;
   border-radius: 30px;
   opacity: 0;
   z-index: 0;
-  
-  transform: translate(-50%, -50%) scale(0.8);
   border: 5px solid transparent;
   box-shadow: 0 20px 40px rgba(128, 0, 128, 0.3);
   transition: all 1.5s ease-in-out;
@@ -123,11 +129,23 @@ body {
   animation: none;
 }
 
+.bottle-img:nth-child(1) {
+  animation: rotateBottles 12s infinite ease-in-out;
+  animation-delay: 0s;
+}
+.bottle-img:nth-child(2) {
+  animation: rotateBottles 12s infinite ease-in-out;
+  animation-delay: 3s;
+}
+.bottle-img:nth-child(3) {
+  animation: rotateBottles 12s infinite ease-in-out;
+  animation-delay: 6s;
+}
+.bottle-img:nth-child(4) {
+  animation: rotateBottles 12s infinite ease-in-out;
+  animation-delay: 9s;
+}
 
-.bottle-img:nth-child(1) { animation: rotateBottles 12s infinite ease-in-out; animation-delay: 0s; }
-.bottle-img:nth-child(2) { animation: rotateBottles 12s infinite ease-in-out; animation-delay: 3s; }
-.bottle-img:nth-child(3) { animation: rotateBottles 12s infinite ease-in-out; animation-delay: 6s; }
-.bottle-img:nth-child(4) { animation: rotateBottles 12s infinite ease-in-out; animation-delay: 9s; }
 @keyframes rotateBottles {
   0% {
     opacity: 0;
@@ -170,9 +188,15 @@ body {
 }
 
 @keyframes glowPulse {
-  0% { box-shadow: 0 0 40px rgba(166, 74, 201, 0.4); }
-  100% { box-shadow: 0 0 80px rgba(206, 115, 255, 0.7); }
+  0% {
+    box-shadow: 0 0 40px rgba(166, 74, 201, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 80px rgba(206, 115, 255, 0.7);
+  }
 }
+
+/* WHY CHOOSE US */
 .why-choose {
   padding: 6rem 2rem;
   background: linear-gradient(135deg, #200033 0%, #3f0c56 100%);
@@ -188,6 +212,7 @@ body {
   opacity: 0;
   animation: floatIn 1s ease-out forwards;
 }
+
 @keyframes floatIn {
   from {
     transform: translateY(50px);
@@ -241,8 +266,12 @@ body {
 }
 
 @keyframes floatCard {
-  from { transform: translateY(0); }
-  to { transform: translateY(-10px); }
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
 }
 
 /* INDUSTRIES SECTION */
@@ -289,38 +318,82 @@ body {
   color: #d8b4f8;
 }
 
-/* ------------------------------------------ */
-/*            RESPONSIVE BREAKPOINTS          */
-/* ------------------------------------------ */
-
+/* Responsive Breakpoints */
 @media (max-width: 1024px) {
-  .hero-title { font-size: 1.8rem; }
-  .bottle-img { height: 240px; }
-  .carousel-card { width: 260px; }
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .bottle-img {
+    height: 240px;
+  }
+
+  .carousel-card {
+    width: 260px;
+  }
 }
 
 @media (max-width: 768px) {
-  .hero-title { font-size: 1.6rem; }
-  .hero-subtext { font-size: 1rem; }
-  .bottle-gallery.creative-spin { height: 400px; padding: 2rem; }
-  .bottle-img { height: 200px; }
-  .industries-title { font-size: 1.8rem; }
-  .carousel-card { width: 90%; }
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+  }
+
+  .bottle-gallery.creative-spin {
+    height: 400px;
+    padding: 2rem;
+  }
+
+  .bottle-img {
+    height: 200px;
+  }
+
+  .industries-title {
+    font-size: 1.8rem;
+  }
+
+  .carousel-card {
+    width: 90%;
+  }
 }
 
-
 @media (max-width: 480px) {
-    .why-choose h2 {
+  .why-choose h2 {
     font-size: 1.6rem;
-    opacity: 1; /* fallback in case animation fails */
+    opacity: 1;
     animation: none;
   }
-  .hero-title { font-size: 1.4rem; }
-  .hero-subtext { font-size: 0.95rem; }
-  .hero-button { padding: 0.7rem 1.5rem; font-size: 0.9rem; }
-  .bottle-gallery.creative-spin { height: 300px; padding: 1rem; }
-  .bottle-img { height: 160px; }
-  .industries-grid { grid-template-columns: 1fr; }
-  .carousel-card { width: 100%; }
- 
+
+  .hero-title {
+    font-size: 1.4rem;
+  }
+
+  .hero-subtext {
+    font-size: 0.95rem;
+  }
+
+  .hero-button {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .bottle-gallery.creative-spin {
+    height: 300px;
+    padding: 1rem;
+  }
+
+  .bottle-img {
+    height: 160px;
+  }
+
+  .industries-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .carousel-card {
+    width: 100%;
+  }
 }
