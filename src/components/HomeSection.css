@@ -3,16 +3,20 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-family: 'Urbanist', sans-serif;
 }
-
 /* BASE WRAPPER */
 .home-wrapper {
-     padding-top: 140px; /* Pushes content below navbar */
+      background: linear-gradient(120deg, #2f1646, #1a0e29);
+  color: white;
+  font-family: 'Urbanist', sans-serif;
+  padding: 9rem 2rem 4rem;   /* Top padding moved to body */
+  text-align: center;
+    
   background: linear-gradient(120deg, #2f1646, #1a0e29);
   color: white;
   font-family: 'Urbanist', sans-serif;
@@ -22,7 +26,8 @@ body {
   background: linear-gradient(120deg, #2f1646, #1a0e29);
   color: white;
   font-family: 'Urbanist', sans-serif;
-  padding: 8rem 2rem 4rem;  /* Increased top padding to avoid overlap with navbar */
+ 
+   /* Increased top padding to avoid overlap with navbar */
   text-align: center;
 }
 
@@ -358,7 +363,7 @@ body {
     height: 200px;
   }
   .home-wrapper {
-    padding-top: 160px; /* More padding on small screens */
+    padding-top: 10rem; /* more spacing for smaller screens */
   }
 
   .industries-title {
@@ -402,7 +407,9 @@ body {
   .industries-grid {
     grid-template-columns: 1fr;
   }
-
+  .home-wrapper {
+    padding-top: 11rem;
+  }
   .carousel-card {
     width: 100%;
   }
