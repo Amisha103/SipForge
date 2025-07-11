@@ -10,7 +10,7 @@ import './App.css';
 
 function App() {
   return (
-   <Router basename="/sipforge-catalog">
+   <Router >
       <>
         <Navbar />
         <Routes>
