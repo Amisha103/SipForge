@@ -1,5 +1,6 @@
 import React from 'react';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 import logo from '../assets/logo.jpg';
 
 const Navbar = () => {
@@ -10,10 +11,10 @@ const Navbar = () => {
         <span className="brand-name">SipForge</span>
       </div>
       <ul className="navbar-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#contact">Contact Us</a></li>
+           <li><Link to="/">Home</Link></li>
+        <li><Link to="/services">Services</Link></li>
+        <li><Link to="/about">About Us</Link></li>
+        <li><Link to="/contact">Contact Us</Link></li>
       </ul>
     </nav>
   );

@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&family=Playfair+Display:ital,wght@1,600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.about-wrapper {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #200033, #3f0c56);
+  color: #ffffff;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.about-section {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-heading {
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1.5rem;
+  color: #f0e6ff;
+}
+
+.about-intro,
+.about-story {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #ddd0f5;
+}
+
+.about-intro strong,
+.about-story strong {
+  color: #e6b3ff;
+}
+
+/* VISION & MISSION HIGHLIGHT SECTION */
+.about-highlight-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.highlight-box {
+  position: relative;
+  padding: 2.5rem 3rem;
+  border: 2px solid #d197ff;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 0 50px rgba(210, 140, 255, 0.15);
+  max-width: 850px;
+  transition: transform 0.3s ease;
+}
+
+.highlight-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 80px rgba(229, 181, 255, 0.4);
+}
+
+.highlight-box h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.3rem;
+  color: #ffe6ff;
+  margin-bottom: 1rem;
+}
+
+.highlight-box p {
+  font-size: 1.15rem;
+  color: #ddd0f5;
+  line-height: 1.8;
+}
+
+/* Alignment styles */
+.left-aligned {
+  margin-right: auto;
+  text-align: left;
+  border-left: 4px solid #c681ff;
+}
+
+.right-aligned {
+  margin-left: auto;
+  text-align: right;
+  border-right: 4px solid #c681ff;
+}
+
+/* Journey */
+.journey {
+  margin-top: 4rem;
+}
+
+.journey h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+  color: #f3e0ff;
+}
+
+.journey p {
+  font-size: 1.1rem;
+  color: #e0d2f2;
+  line-height: 1.8;
+}
+
+/* CTA */
+.cta {
+  margin-top: 4rem;
+  background: linear-gradient(135deg, #43106d, #26053c);
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 60px rgba(195, 115, 255, 0.3);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta h3 {
+  font-size: 2rem;
+  color: #ffdbff;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  font-size: 1.1rem;
+  color: #e5d0ff;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.cta-button {
+  padding: 0.9rem 2.2rem;
+  background-color: #d197ff;
+  color: #19001f;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 40px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 20px rgba(211, 151, 255, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.cta-button:hover {
+  background-color: #f0c8ff;
+  box-shadow: 0 8px 30px rgba(255, 190, 255, 0.5);
+  color: #1a001f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-heading {
+    font-size: 2.2rem;
+  }
+
+  .about-intro,
+  .about-story,
+  .journey p,
+  .highlight-box p {
+    font-size: 1rem;
+  }
+
+  .highlight-box,
+  .left-aligned,
+  .right-aligned {
+    margin: 0 auto;
+    text-align: center;
+    border-left: none;
+    border-right: none;
+    border-top: 4px solid #c681ff;
+  }
+
+  .highlight-box h2 {
+    font-size: 1.8rem;
+  }
+
+  .cta h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-wrapper {
+    padding: 4rem 1rem;
+  }
+
+  .highlight-box {
+    padding: 2rem 1.2rem;
+  }
+
+  .about-heading {
+    font-size: 1.8rem;
+  }
+}
