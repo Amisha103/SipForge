@@ -10,15 +10,17 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HomeSection />} />
-        <Route path="/services" element={<Services />} />
-         <Route path="/about" element={<AboutUs />} />
-         <Route path="/contact" element={<ContactUs />} />
-      </Routes>
-      <Footer />
+   <Router basename="/sipforge-catalog">
+      <>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomeSection />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<ContactUs />} />
+        </Routes>
+        <Footer />
+      </>
     </Router>
   );
 }

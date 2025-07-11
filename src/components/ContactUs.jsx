@@ -16,7 +16,8 @@ const ContactUs = () => {
         <div className="contact-left">
           <div className="contact-info">
             <h3>📍 Address</h3>
-            <p> Madhopur susta, Kachhi Pakki, Muzzafarpur, Bihar, India</p>
+            <p> Madhopur susta, Kachhi Pakki,<br></br>
+                 Muzzafarpur, Bihar, India</p>
             <h3>📞 Phone</h3>
             <p>+91 8252302656</p>
             <h3>📧 Email</h3>
