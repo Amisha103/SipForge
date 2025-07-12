@@ -8,6 +8,7 @@ import CustomerReviews from './components/CustomerReviews';
 import Footer from './components/Footer';
 import './App.css';
 import ContactUs from './components/ContactUs';
+import Jobs from './components/Jobs';
 const isGithub = window.location.hostname.includes("github.io");
 const basename = isGithub ? "/sipforge-catalog" : "/";
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
             <Route path="/reviews" element={<CustomerReviews />} />
+            <Route path="/jobs" element={<Jobs />} />
         </Routes>
         <Footer />
       </>

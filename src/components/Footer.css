@@ -6,7 +6,27 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+}.fssai-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 10px;
 }
+
+.fssai-number {
+  text-align: center;
+  font-size: 14px;
+  color: #d4c2f2;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 10px 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(175, 148, 236, 0.15);
+}
+
+
+
 
 .footer {
   background: #1a0e29;

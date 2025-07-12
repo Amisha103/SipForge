@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
-import './CustomerReviews.css';
+// src/components/CustomerReviews.js
+import React, { useState, useEffect } from 'react';
+import { db } from '../firebase';
+import {
+  collection,
+  addDoc,
+  getDocs,
+  query,
+  orderBy,
+  serverTimestamp
+} from 'firebase/firestore';
+import '../CustomerReviews.css';
 
 const CustomerReviews = () => {
-  const [reviews, setReviews] = useState([
-    {
-      name: "Amisha",
-      company: "Just a Customer",
-      review: "Great quality of bottles and excellent members of company",
-      rating: 5
-    }
-  ]);
-
+  const [reviews, setReviews] = useState([]);
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -18,14 +20,34 @@ const CustomerReviews = () => {
     rating: '5'
   });
 
+  const reviewsRef = collection(db, 'customer_reviews');
+
+  useEffect(() => {
+    const fetchReviews = async () => {
+      const q = query(reviewsRef, orderBy('timestamp', 'desc'));
+      const data = await getDocs(q);
+      setReviews(data.docs.map(doc => doc.data()));
+    };
+
+    fetchReviews();
+  }, []);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setReviews([formData, ...reviews]);
+
+    const newReview = {
+      ...formData,
+      rating: Number(formData.rating),
+      timestamp: serverTimestamp()
+    };
+
+    await addDoc(reviewsRef, newReview);
+    setReviews([newReview, ...reviews]);
     setFormData({ name: '', company: '', review: '', rating: '5' });
   };
 
