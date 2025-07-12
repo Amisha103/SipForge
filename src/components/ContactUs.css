@@ -71,7 +71,9 @@
 }
 
 .bottle {
-  width: 160px;
+  width: 360px;
+  height: 360px;
+  margin-top: 20px;
   border-radius: 14px;
   transition: transform 0.3s ease;
   box-shadow: 0 0 20px rgba(204, 153, 255, 0.4);

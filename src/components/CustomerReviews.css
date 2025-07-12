@@ -1,0 +1,122 @@
+.reviews-section {
+  padding: 120px 2rem 60px;
+  background: linear-gradient(120deg, #1b0e2d, #321747);
+  color: white;
+  font-family: 'Urbanist', sans-serif;
+  text-align: center;
+}
+
+.reviews-heading {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(45deg, #f3ec78, #af94ec);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.reviews-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.review-card {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2rem;
+  border-radius: 20px;
+  width: 300px;
+  text-align: left;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 20px rgba(166, 74, 201, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+  transform: scale(1.03);
+}
+
+.review-text {
+  font-size: 1rem;
+  font-style: italic;
+  color: #ddd;
+  margin-bottom: 1rem;
+}
+
+.review-name {
+  font-weight: bold;
+  color: #f5e9ff;
+}
+
+.review-name span {
+  font-weight: normal;
+  color: #b6a1d9;
+}
+
+.review-stars {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: gold;
+}
+.review-form {
+  background: rgba(255, 255, 255, 0.07);
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 20px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px rgba(175, 148, 236, 0.2);
+}
+
+.review-form input,
+.review-form textarea {
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+.review-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.review-form label {
+  color: #ccc;
+  font-weight: bold;
+}
+
+.review-form input[type="range"] {
+  accent-color: #af94ec;
+}
+
+.review-form button {
+  background: #af94ec;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.review-form button:hover {
+  background: #c2a2ff;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .reviews-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+

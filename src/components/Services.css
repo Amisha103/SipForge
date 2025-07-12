@@ -5,6 +5,19 @@
   font-family: 'Urbanist', sans-serif;
   text-align: center;
 }
+.service-card ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.service-card ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #ddd;
+  display: flex;
+  align-items: center;
+}
 
 .services-header h1 {
   font-size: 2.6rem;

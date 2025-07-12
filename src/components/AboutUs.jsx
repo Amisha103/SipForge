@@ -1,6 +1,7 @@
 import React from 'react';
 import './AboutUs.css';
 import { Link } from 'react-router-dom';
+
 const AboutUs = () => {
   return (
     <section className="about-wrapper">
@@ -16,22 +17,21 @@ const AboutUs = () => {
           With a vision for sustainability and innovation, they built SipForge to offer eco-friendly and cost-effective solutions that make brands memorable with every sip.
         </p>
 
-    <div className="about-highlight-section">
-  <div className="highlight-box left-aligned">
-    <h2>🚀 Our Vision</h2>
-    <p>
-      To make everyday essentials the canvas for tomorrow’s brands—where advertising becomes meaningful, memorable, and green.
-    </p>
-  </div>
+        <div className="about-highlight-section">
+          <div className="highlight-box left-aligned">
+            <h2>🚀 Our Vision</h2>
+            <p>
+              To make everyday essentials the canvas for tomorrow’s brands—where advertising becomes meaningful, memorable, and green.
+            </p>
+          </div>
 
-  <div className="highlight-box right-aligned">
-    <h2>🌱 Our Mission</h2>
-    <p>
-      To transform water bottles into brand messengers that spark curiosity, start conversations, and leave a lasting impact—while staying kind to the planet.
-    </p>
-  </div>
-</div>
-
+          <div className="highlight-box right-aligned">
+            <h2>🌱 Our Mission</h2>
+            <p>
+              To transform water bottles into brand messengers that spark curiosity, start conversations, and leave a lasting impact—while staying kind to the planet.
+            </p>
+          </div>
+        </div>
 
         <div className="journey">
           <h2>Our Journey</h2>
@@ -40,11 +40,17 @@ const AboutUs = () => {
           </p>
         </div>
 
-      <div className="cta">
-  <h3>Ready to Build Something Iconic?</h3>
-  <p>Your brand deserves more than ads — it deserves conversations. Let's collaborate and make every sip unforgettable.</p>
-<Link to="/contact" className="cta-button">Contact Us</Link>
-</div>
+        {/* ✅ FSSAI Number Section */}
+        <div className="fssai-info">
+          <strong>FSSAI Lic/Reg No. :</strong> 20425061000572
+        </div>
+
+        {/* CTA Button */}
+        <div className="cta">
+          <h3>Ready to Build Something Iconic?</h3>
+          <p>Your brand deserves more than ads — it deserves conversations. Let's collaborate and make every sip unforgettable.</p>
+          <Link to="/contact" className="cta-button">Contact Us</Link>
+        </div>
 
       </div>
     </section>

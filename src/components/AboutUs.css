@@ -146,6 +146,18 @@
   position: relative;
   z-index: 1;
 }
+.fssai-info {
+  margin: 2rem auto;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #e6e6e6;
+  border-left: 4px solid #a37bf3;
+  width: fit-content;
+  text-align: left;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(163, 123, 243, 0.3);
+}
 
 .cta-button:hover {
   background-color: #f0c8ff;
